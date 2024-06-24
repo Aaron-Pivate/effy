@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<title>上传作品参赛</title>
+		<link rel="stylesheet" href="/public/static/css/bootstrap.css" />
+		<link rel="stylesheet" href="/public/static/css/select2.min.css" />
+		<link rel="stylesheet" href="/public/admin/layui/css/layui.css">
+		<link href="/public/static/css/style.20220901.css" rel="stylesheet">
+		<script type="text/javascript" src="/public/static/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/public/static/js/select2.min.js"></script>
+		<script type="text/javascript" src="/public/static/js/jquery.matchHeight.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="container clearfix">
+				<div class="k_nav_btn">
+					<a href="javascript:;">
+						<b></b>
+						<b></b>
+						<b></b>
+					</a>
+				</div>
+				<div class="k_logo">
+					<a href="/index">
+						<h1>
+							<div class="min-logo">
+								<img src="/public/static/images/logo.png" width="100%" />
+							</div>
+							<div class="max-logo">
+								<img src="/public/static/images/logo1.png" width="100%" /> </div>
+						</h1>
+					</a>
+				</div>
+				<div class="k_nav">
+					<ul class="k_nav_det">
+						<li>
+							<a href="/index">首页</a> </li>
+						<li>
+							<a href="/index?#a1">赛事详情</a> </li>
+						<li>
+							<a href="/index?#a2">参赛说明</a> </li>
+						<li>
+							<a href="/index?#a3">主办单位</a> </li>
+						<li>
+							<a href="/about">关于我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="k_conts">
+			<div class="k_t_pad"></div>
+			<ul class="k_index_banner wow fadeInUp">
+				<li>
+					<a href="javascript:;">
+						<div class="banner-txt">
+							<div>
+								<div class="eng-txt" style="background-color: rgba(255,205,0,0.5);border: 1px solid rgba(158,151,103,.5);color: #000;display: inline-block; padding: 3px 8px;font-weight: bold;">
+									GROW TOGETHER CHARITY BLOOM </div>
+								<div style="height: 5px;"></div>
+								<div class="chain-txt" style="background-color: rgba(255,205,0,0.5);border: 1px solid rgba(158,151,103,.5);color: #000;display: inline-block; padding: 3px 8px;font-weight: bold;">
+									第十八届设计之都（中国·深圳）公益广告大赛 </div>
+								<img class="txtimg" src="/public/static/images/banntxt.png" />
+							</div>
+						</div>
+						<img class="bannimg" src="/public/static/images/20230904/ban2.jpg" width="100%" />
+					</a></li>
+			</ul>
+		</div>
+		<div class="sendData">
+			<div class="container">
+				<form action="/upfile" method="post">
+					<div class="title">
+						<div class="inle-box">
+							<img src="/public/static/images/information.png?v=20230904" />
+							<span style="color: #ff9a27;">填写投稿信息</span></div>
+					</div>
+					<div class="cell">
+						<div class="cell_label">
+							<b class="b"></b>
+							<span class="span">作品类别：</span></div>
+						<div class="cell_input select-list">
+							<div class="select-item" style="width: 100%;">
+								<select name="filetype" class="select2">
+									<option value="1">平面类</option>
+									<option value="2">视频类</option>
+									<option value="3">音频类</option>
+									<option value="4">互动类</option>
+								</select>
+							</div>
+							<div class="select-item" style="display: none;">
+								<select name="fileobjecttype" class="select2">
+									<option value="0">—— 作品主题包括但不限于以下内容 ——</option>
+									<option value="1" selected>培育和践行社会主义核心价值观</option>
+									<option value="2">全面建成小康社会</option>
+									<option value="3">决战脱贫攻坚</option>
+<!--									<option value="4">庆祝深圳经济特区建立40周年</option>-->
+<!--									<option value="5">防疫抗疫复工复产</option>-->
+									<option value="6">文明健康有你有我</option>
+									<option value="7">一带一路</option>
+									<option value="8">文明城市创建</option>
+									<option value="9">垃圾分类</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="cell">
+						<div class="cell_label">
+							<b class="b"></b>
+							<span class="span">作品名称：</span></div>
+						<div class="cell_input">
+							<input name="filetitle" type="text" maxlength="50" placeholder="请输入作品名称">
+						</div>
+					</div>
+					<div class="cell">
+						<div class="cell_label">
+							<b class="b"></b>
+							<span>
+								<span class="span">设计者姓名：</span>
+								<span class="sitName">(或机构名称)</span></span></div>
+						<div class="cell_input">
+							<input name="designer" class="sel_one" type="text" placeholder="请输入您的姓名或者公司 / 机构 / 单位名称">
+							<input name="designerdegree" class="sel_two" type="text" placeholder="请输入职务">
+						</div>
+					</div>
+					<div class="cell">
+						<div class="cell_label">
+							<b class="b"></b>
+							<span>
+								<span class="span">所在机构名：</span>
+								<span class="sitName">(或学校)</span></span></div>
+						<div class="cell_input">
+							<input name="supporter" class="sel_one" type="text" placeholder="请输入您的机构全称或学校全称">
+							<input name="zipcode" class="sel_two" type="number" placeholder="请输入邮编">
+						</div>
+					</div>
+					<div class="cell">
+						<div class="cell_label">
+							<b class="b"></b>
+							<span>
+								<span class="span">指导老师：</span>
+								<span class="sitName">(学生作品请填写)</span></span></div>
+						<div class="cell_input">
+							<input name="teacher" type="text" maxlength="50" placeholder="请输入您的机构全称或学校全称 / 机构 / 单位名称">
+						</div>
+					</div>
+					<div class="cell">
+						<div class="cell_label">
+							<b class="b"></b>
+							<span>
+								<span class="span">联系人：</span></span></div>
+						<div class="cell_input">
+							<input name="contactname" class="three_one" type="text" placeholder="请输入联系人姓名">
+							<input name="contactphone" class="three" type="number" placeholder="请输入您的手机号码">
+							<input name="contactqq" class="three" type="number" placeholder="请输入您的QQ">
+						</div>
+					</div>
+					<div class="cell">
+						<div class="cell_label">
+							<b class="b"></b>
+							<span>
+								<span class="span">详细地址：</span></span></div>
+						<div class="cell_input">
+							<input name="contactaddress" type="text" maxlength="50" placeholder="请输入您的详细地址">
+						</div>
+					</div>
+					<div class="cell">
+						<div class="cell_label">
+							<b class="b"></b>
+							<span>
+								<span class="span">电子邮件：</span></span></div>
+						<div class="cell_input">
+							<input name="contactemail" type="text" maxlength="50" placeholder="请输入您的电子邮件">
+						</div>
+					</div>
+					<div class="cell">
+						<div class="cell_label">
+							<b class="b"></b>
+							<span>
+								<span class="span">作品上传：</span></span></div>
+						<div class="cell_input" style="justify-content: flex-start">
+							<span class="span">上传单个作品大小不超过20M（格式：jpg,png,gif,zip,avi,mp4,mpeg,mpg,mkv,vob,asx）</span>
+							<input type="hidden" name="yourfile" value="">
+							<button type="button" id="bt-upfile">点击上传</button>
+							<span class="nt-upfile" style="color:red">注：如果出现文件上传异常，请使用电脑进行上传作品。</span>
+						</div>
+					</div>
+					<div class="cell">
+						<div class="cell_label">
+							<b class="b"></b>
+							<span>
+								<span class="span">创作说明：</span></span></div>
+						<div class="cell_input">
+							<textarea name="filedescription" type="text" maxlength="2000" placeholder="请输入您的设计说明，入围作品巡展时将用到，请务必认真填写"></textarea>
+						</div>
+					</div>
+					<div class="radio">
+						<div class="radio_item">
+							<a class="radiohe"></a>
+							<div class="item_centent">
+								<p>参赛承诺协议 <b>*</b></p>
+								<span><a href="/public/upload/file/introduce.zip" target="_blank" download="introduce.zip">(点击勾选“参赛承诺协议”代表您默认同意此协议声明)</a></span>
+							</div>
+						</div>
+						<div class="radio_item">
+							<a class="radiohes"></a>
+							<div class="item_centent">
+								<p>作品著作权声明<b>*</b></p>
+								<span><a href="/public/upload/file/introduce.zip" target="_blank" download="introduce.zip">凡来稿的作者，均视为已确认并遵守本征稿启事的各项规定</a></span>
+							</div>
+						</div>
+					</div>
+					<div class="buta">
+						<button type="submit" class="fromBtn">确认提交</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="footer" style="background-color: #FFF100;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="foot-txt">
+							<div class="foot-title" style="color: #000;">深圳广播电影电视集团</div>
+							<ul>
+								<li style="color: #000;">联系方式：0755-88310292</li>
+								<li style="color: #000;">邮箱：26246239@qq.com</li>
+								<li style="color: #000;">地址：广东省深圳市福田区鹏程一路一号广电大厦</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 ewm-list">
+						<div class="ewm-item">
+							<img src="/public/static/images/ewm.jpg" width="100%" /></div>
+						<div class="ewm-item">
+							<img src="/public/static/images/ewm2.png" width="100%" /></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="k_copy_r" style="background-color: #FFF100;">
+			<div class="container" style="color: #000;">
+				© 版权所有 深圳广播电影电视集团 Copyright © 2019 Shenzhen Media Group
+				<span style="color: #000;"> 本活动最终解释权归大赛组委会所有</span>
+			</div>
+		</div>
+	</body>
+	<script src="/public/static/js/script.js"></script>
+	<script src="/public/admin/layui/layui.all.js"></script>
+    <script src="/public/admin/layui/layui.js"></script>
+	<script src="/public/admin/js/vue.min.js"></script>
+	<script>
+		layui.use(['upload'], function(){
+			var layer = layui.layer;
+			var upload = layui.upload;
+
+			upload.render({
+				elem: '#bt-upfile',
+				url: '/index/index/uploadFile',
+				accept: 'file',
+                size: 20480,
+				before: function (obj) {
+                    layer.load();
+	            },
+				progress: function(n,elem){
+					console.log("progress:",n,elem);
+					let percent = n + '%';
+					element.progress('demo', percent);
+				},
+				done: function (result) {
+                    layer.closeAll('loading');
+					console.log(result);
+					// 上传完毕回调
+					if (result.code === 1) {
+						this.item.prev('input').val(result.url);
+                        var _obj = $("#bt-upfile");
+						_obj.css({"background-color":'#20288a'});
+						_obj.text('已上传');
+                        _obj.attr("disabled","disabled");
+					} else {
+						layer.msg(result.msg);
+					}
+				},
+				error: function () {
+					layer.closeAll('loading');
+				}
+			});
+
+		});
+
+		$(".select2").select2({
+			minimumResultsForSearch: -1
+		});
+
+		$('.fromBtn').click(function(){
+		    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		 if($('[name="filetype"]').val()==0){
+		    alert('请选择作品类别')
+		    return false
+		 }else if($.trim($('[name="filetitle"]').val())==''){
+		    alert('请输入作品名称')
+		    return false
+		 }else if($.trim($('[name="designer"]').val())==''){
+		  alert('请输入设计者姓名')
+		  return false
+		 }else if($.trim($('[name="designerdegree"]').val())==''){
+		  alert('请输入职务')
+		  return false
+		 }else if($.trim($('[name="supporter"]').val())==''){
+		  alert('请输入所在机构')
+		  return false
+		 }else if($.trim($('[name="contactname"]').val())==''){
+		  alert('请输入联系人姓名')
+		  return false
+		 }else if($.trim($('[name="contactphone"]').val()).length!=11){
+		  alert('请输入正确的联系人手机号')
+		  return false
+		 }else if($.trim($('[name="contactqq"]').val())==''){
+		  alert('请输入联系人QQ')
+		  return false
+		 }else if($.trim($('[name="contactaddress"]').val())==''){
+		  alert('请输入详细地址')
+		  return false
+		 }else if(!filter.test($.trim($('[name="contactemail"]').val()))){
+		  alert('请输入正确的电子邮箱')
+		  return false
+		 }else if($.trim($('[name="yourfile"]').val())==''){
+		  alert('请上传文件1')
+		  return false
+		 }else if($.trim($('[name="filedescription"]').val())==''){
+		  alert('请输入创作说明')
+		  return false
+		 }else if(!$('.radiohe').hasClass('active')){
+		  alert('请勾选参赛承诺协议')
+		  return false
+		 }else if(!$('.radiohes').hasClass('active')){
+		  alert('请勾选作品著作权声明')
+		  return false
+		 }
+		 })
+	</script>
+</html>
